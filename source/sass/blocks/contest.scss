@@ -1,0 +1,19 @@
+.contest {
+  line-height: 30px;
+}
+
+.contest__title {
+  margin: 0;
+  padding: 35px $content-padding 60px;
+  background: url("../../img/bg-back-mobile@1x.jpg") 0% 25% no-repeat;
+  text-align: center;
+  font-size: 24px;
+  font-weight: lighter;
+  color: $white;
+}
+
+.contest__info {
+  margin: 0;
+  padding: 50px $content-padding;
+  text-align: center;
+}

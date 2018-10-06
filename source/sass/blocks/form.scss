@@ -1,0 +1,118 @@
+.form {
+  background-color: $gray;
+}
+
+.form__group {
+  margin: 0;
+  padding: 0 $content-padding 40px;
+  border: none;
+  background-color: $white;
+  &--check {
+    background-color: $gray;
+  }
+}
+
+.form__list {
+  @include list-reset;
+}
+
+.form__item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.form__text-label {
+  padding: 10px 20px 0;
+  width: 100%;
+  color: $pink;
+  text-transform: uppercase;
+  &--area {
+    padding: 20px 0;
+    display: block;
+    text-align: center;
+  }
+}
+
+.form__text {
+  width: 100%;
+  padding: 20px;
+  border: 2px solid #e5e5e5;
+  &::placeholder {
+    font-size: 18px;
+    line-height: 30px;
+    color: $blue;
+  }
+  &--area {
+    box-sizing: border-box;
+    min-height: 197px;
+  }
+}
+
+.form__title {
+  padding: 20px;
+  display: block;
+  background-color: $gray;
+  text-align: center;
+  color: $pink;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.form__choice {
+  display: none;
+}
+
+.form__label {
+  padding: 20px 0 20px 70px;
+  color: $blue;
+  font-size: 18px;
+  &--check::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    box-shadow: 0 0 0 2px #e5e5e5;
+    background-color: $white;
+  }
+  &--radio::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #e5e5e5;
+    background-color: $white;
+  }
+}
+
+.form__choice:checked + .form__label {
+  &--check::before {
+    background: $white url("../../img/icon-yes.svg") 50% 50% no-repeat;
+  }
+  &--radio::before {
+    width: 14px;
+    height: 14px;
+    background-color: $pink;
+    border: 10.5px solid $white;
+  }
+}
+
+.form__send {
+  padding: 0 $content-padding;
+  background-color: $white;
+}
+
+.form__note {
+  margin: 0;
+  padding: 30px 0 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: $blue;
+  span {
+    color: $pink;
+  }
+}

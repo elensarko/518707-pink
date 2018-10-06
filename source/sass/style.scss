@@ -1,0 +1,25 @@
+@charset "utf-8";
+@import "global";
+@import "variables";
+@import "mixins";
+
+@import "blocks/page-main";
+@import "blocks/page-header";
+@import "blocks/main-nav";
+@import "blocks/intro";
+@import "blocks/download";
+@import "blocks/information";
+@import "blocks/reviews";
+@import "blocks/slider";
+@import "blocks/price";
+@import "blocks/contacts";
+
+@import "blocks/contest";
+@import "blocks/form";
+@import "blocks/button";
+@import "blocks/page-footer";
+@import "blocks/social";
+@import "blocks/popup";
+
+@import "blocks/photo";
+@import "blocks/edit";

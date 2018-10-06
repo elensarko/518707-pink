@@ -1,0 +1,34 @@
+.main-nav__list {
+  @include list-reset;
+}
+
+.main-nav__item {
+  padding: 15px;
+  text-align: center;
+  background-color: $blue;
+  border-top: 1px solid #485461;
+  border-bottom: 1px solid $black;
+}
+
+.main-nav__link {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 32px;
+  color: $white;
+  text-transform: uppercase;
+  &:hover,
+  &:focus {
+    color: $pink;
+  }
+  &:active {
+    color: rgba($pink, 0.5%)
+  }
+  &--current {
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: default;
+      color: $white;
+    }
+  }
+}

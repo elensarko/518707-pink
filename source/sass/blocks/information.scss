@@ -1,0 +1,36 @@
+.information {
+  background-color: $gray;
+  color: $blue;
+  text-align: center;
+}
+
+.information__header {
+  margin: 0;
+  padding: 15px 6.25%;
+  font-size: 24px;
+  line-height: 32px;
+  background-color: $white;
+}
+
+.information__list {
+  @include list-reset;
+  padding: 15px 6.25%;
+  background: $gray url("../../img/bg-triangle-white.svg") 0 0 no-repeat;
+  background-size: 100% auto;
+}
+
+.information__item {
+  text-align: center;
+}
+
+.information__title {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.information__image {
+  position: relative;
+  top: 50px;
+}

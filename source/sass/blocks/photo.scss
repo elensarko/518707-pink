@@ -1,0 +1,79 @@
+.photo__title {
+  margin: 0;
+  padding: 35px $content-padding 60px;
+  background: url("../../img/bg-back-mobile@1x.jpg") 0% 25% no-repeat;
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: lighter;
+  color: $white;
+}
+
+.photo__text {
+  padding: 35px;
+  text-align: center;
+  line-height: 30px;
+  color: $blue;
+}
+
+.photo__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo__item {
+  width: 100%;
+}
+
+.photo__image {
+  margin: 0 $content-padding;
+  &--panorama {
+    margin: 0;
+  }
+}
+
+.photo__comment-wrapper {
+  margin: -7px 20px 20px 20px;
+  padding: 25px 10px 20px 17px;
+  background-color: $gray;
+  color: $blue;
+}
+
+.photo__comment {
+  margin: 0;
+}
+
+.photo__author-wrapper   {
+  margin: 0;
+}
+
+.photo__comment-author {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.photo__comment-time {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.photo__comment-text {
+  margin: 0;
+}
+
+.photo__comment-like {
+  position: relative;
+  margin: 10px 50px 0;
+  color: $pink;
+  text-transform: uppercase;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 6px;
+    width: 13px;
+    height: 12px;
+    background: url("../../img/icon-heart.svg");
+  }
+}

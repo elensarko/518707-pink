@@ -1,0 +1,23 @@
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social__link {
+  display: block;
+  margin: 0 7px;
+  width: 45px;
+  height: 45px;
+  box-shadow: 0 0 0 3px #e9ebec;
+  border-radius: 50%;
+  font-size: 0;
+  &--twitter{
+    background: $white url("../../img/icon-twitter.svg") 50% 50% no-repeat;
+  }
+  &--facebook{
+    background: $white url("../../img/icon-facebook.svg") 50% 50% no-repeat;
+  }
+  &--youtube{
+    background: $white url("../../img/icon-youtube.svg") 50% 50% no-repeat;
+  }
+}

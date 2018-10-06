@@ -1,0 +1,27 @@
+.page-footer {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.page-footer__social {
+  @include list-reset;
+  padding: 40px 0;
+}
+
+.page-footer__author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-footer__text {
+  margin-right: 20px;
+  line-height: 18px;
+  color: $blue;
+  font-style: normal;
+}
+.page-footer__link {
+  display: block;
+  width: 26px;
+  height: 34px;
+}
