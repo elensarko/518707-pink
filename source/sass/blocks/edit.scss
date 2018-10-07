@@ -4,7 +4,7 @@
 
 .edit__text {
   margin: 20px 0;
-  padding: 4px 0 43px;
+  padding: 3px 0 43px;
   text-align: center;
   line-height: 30px;
   color: $blue;
@@ -25,7 +25,7 @@
 }
 
 .edit__type {
-  margin: 30px 15px 60px;
+  margin: 30px 15px 73px;
   display: block;
   width: 50px;
   height: 50px;
@@ -81,7 +81,7 @@
     position: absolute;
     z-index: 1;
     top: 110px;
-    left: 230px;
+    left: 232px;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -95,7 +95,7 @@
     position: absolute;
     z-index: 1;
     top: 110px;
-    left: 230px;
+    left: 232px;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -109,7 +109,7 @@
     position: absolute;
     z-index: 1;
     top: 110px;
-    left: 230px;
+    left: 232px;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -124,7 +124,7 @@
 
 .edit__buttons {
   margin-bottom: -10px;
-  padding: 50px $content-padding 33px;
+  padding: 37px $content-padding 33px;
 }
 
 .edit__button {
@@ -138,6 +138,7 @@
   border: 4px solid $pink;
   border-radius: 50px;
   background-color: $gray;
+  letter-spacing: 1px;
 
   &--disabled {
     border-color: #dddfe0;

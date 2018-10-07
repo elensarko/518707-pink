@@ -1,4 +1,6 @@
 .main-nav__list {
+  position: relative;
+  top: 70px;
   @include list-reset;
 }
 

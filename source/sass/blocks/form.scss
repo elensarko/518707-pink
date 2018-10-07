@@ -4,17 +4,18 @@
 
 .form__group {
   margin: 0;
-  padding: 18px $content-padding 40px;
+  padding: 16px $content-padding 40px;
   border: none;
   background-color: $white;
 
   &--check {
-    padding-bottom: 22px;
+    padding-bottom: 20px;
     background-color: $gray;
   }
 
   &:last-of-type {
     padding-bottom: 38px;
+    padding-top: 20px;
   }
 }
 
@@ -44,7 +45,7 @@
 
 .form__text {
   width: 100%;
-  padding: 24px 19px 22px;
+  padding: 22px 19px;
   border: 2px solid #e5e5e5;
 
   &::placeholder {
@@ -75,13 +76,13 @@
 }
 
 .form__label {
-  padding: 27px 0 25px 70px;
+  padding: 25px 0 27px 70px;
   color: $blue;
   font-size: 18px;
 
   &--radio {
-    padding-top: 18px;
-    padding-bottom: 27px;
+    padding-top: 21px;
+    padding-bottom: 25px;
   }
 
   &--check::before {
@@ -99,8 +100,8 @@
     content: "";
     position: absolute;
     left: 2px;
-    width: 35px;
-    height: 35px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     box-shadow: 0 0 0 2px #e5e5e5;
     background-color: $white;
@@ -113,22 +114,22 @@
   }
 
   &--radio::before {
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
     background-color: $pink;
     border: 10.5px solid $white;
   }
 }
 
 .form__send {
-  margin-bottom: 9px;
+  margin-bottom: 6px;
   padding: 0 $content-padding;
   background-color: $white;
 }
 
 .form__note {
   margin: 0;
-  padding: 33px 0 0;
+  padding: 35px 0 0;
   text-align: center;
   text-transform: uppercase;
   color: $blue;

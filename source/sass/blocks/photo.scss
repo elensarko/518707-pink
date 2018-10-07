@@ -1,16 +1,17 @@
 .photo__title {
   margin: 0;
-  padding: 28px $content-padding 80px;
-  background: url("../img/bg-back-mobile@1x.jpg") 0% 25% no-repeat;
+  padding: 99px $content-padding 81px;
   text-align: center;
   font-size: 24px;
   line-height: 30px;
-  font-weight: lighter;
+  font-weight: 100;
   color: $white;
+  background: url("../img/bg-back-mobile@1x.jpg") 0 -1% no-repeat;
+  background-size: 100% auto;
 }
 
 .photo__text {
-  padding: 33px 35px;
+  padding: 32px 35px 34px;
   text-align: center;
   line-height: 30px;
   color: $blue;
