@@ -21,7 +21,7 @@
 .information__list {
   @include list-reset;
   padding: 80px $content-padding 288px;
-  background: $gray url("../../img/bg-triangle-white.svg") 0 0 no-repeat;
+  background: $gray url("../img/bg-triangle-white.svg") 0 0 no-repeat;
   background-size: 100% auto;
 }
 

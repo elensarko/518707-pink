@@ -33,15 +33,15 @@
   cursor: pointer;
 
   &--crop {
-    background: url("../../img/icon-editor-crop.svg") 50% 50% no-repeat;
+    background: url("../img/icon-editor-crop.svg") 50% 50% no-repeat;
   }
 
   &--fill {
-    background: url("../../img/icon-editor-fill.svg") 50% 50% no-repeat;
+    background: url("../img/icon-editor-fill.svg") 50% 50% no-repeat;
   }
 
   &--contrast {
-    background: url("../../img/icon-editor-contrast.svg") 50% 50% no-repeat;
+    background: url("../img/icon-editor-contrast.svg") 50% 50% no-repeat;
   }
 
   &--crop::before {

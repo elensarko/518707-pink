@@ -109,7 +109,7 @@
 
 .form__choice:checked + .form__label {
   &--check::before {
-    background: $white url("../../img/icon-yes.svg") 50% 50% no-repeat;
+    background: $white url("../img/icon-yes.svg") 50% 50% no-repeat;
   }
 
   &--radio::before {

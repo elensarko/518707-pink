@@ -1,7 +1,7 @@
 .price {
   padding: 91px $content-padding 6px;
   overflow: hidden;
-  background: $gray url("../../img/bg-triangle-white.svg") 0 0 no-repeat;
+  background: $gray url("../img/bg-triangle-white.svg") 0 0 no-repeat;
   background-size: 99% auto;
 }
 
@@ -30,7 +30,7 @@
   text-align: center;
 
   &--is-hit::before {
-    content: url("../../img/bg-hit.svg");
+    content: url("../img/bg-hit.svg");
     position: absolute;
     top: 0;
     left: 0;
@@ -73,7 +73,7 @@
     right: 16px;
     width: 31px;
     height: 31px;
-    background: url("../../img/icon-yes.svg") 50% 50% no-repeat;
+    background: url("../img/icon-yes.svg") 50% 50% no-repeat;
     background-size: 32px 23px;
   }
 
@@ -83,7 +83,7 @@
     right: 16px;
     width: 31px;
     height: 28px;
-    background: url("../../img/icon-no.svg") 50% 50% no-repeat;
+    background: url("../img/icon-no.svg") 50% 50% no-repeat;
     background-size: 32px 23px;
   }
 }
