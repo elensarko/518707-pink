@@ -1,8 +1,10 @@
 .popup {
+  display: none;
   margin: 40px 0;
   text-align: center;
   color: $blue;
   box-shadow: 0 15px 15px rgba($black, 0.15%), 0 -5px 15px rgba($black, 0.15%);
+
   &--gray {
     background-color: $gray;
   }
@@ -14,6 +16,8 @@
 }
 
 .popup__title {
+  margin: 0;
+  padding: 20px;
   font-size: 18px;
   font-weight: bold;
   line-height: 24px;
@@ -22,5 +26,5 @@
 
 .popup__button {
   margin: 40px $content-padding;
-  width: 100% - ($content-padding * 2)
+  width: 100% - ($content-padding * 2);
 }
