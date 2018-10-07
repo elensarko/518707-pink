@@ -137,6 +137,7 @@ template {
   src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff"), url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff"), url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff"); }
 
 body {
+  position: relative;
   width: 320px;
   margin: 0 auto;
   padding: 0;
@@ -159,6 +160,10 @@ a {
   padding: 0; }
 
 .page-header__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   margin: 0;
   padding: 0 6.25%;
   display: -webkit-box;
@@ -171,10 +176,12 @@ a {
       -ms-flex-align: center;
           align-items: center;
   background-color: #283645;
-  border-bottom: 1px solid #000000; }
+  border-bottom: 1px solid #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 .page-header__logo {
-  padding: 20px 0; }
+  padding: 21px 0 19px; }
 
 .page-header__toggle {
   width: 24px;
@@ -187,7 +194,9 @@ a {
 .main-nav__list {
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  position: relative;
+  top: 70px; }
 
 .main-nav__item {
   padding: 15px;
@@ -212,11 +221,12 @@ a {
     color: #ffffff; }
 
 .intro {
-  background: url("../img/bg-back-mobile@1x.jpg") 40% -10% no-repeat; }
+  background: url("../img/bg-back-mobile@1x.jpg") 0 1.5% no-repeat;
+  background-size: 100%; }
 
 .intro__image {
   display: block;
-  padding-top: 109px; }
+  padding-top: 180px; }
 
 .download {
   margin: 0;
@@ -252,7 +262,7 @@ a {
   .download__link--default {
     width: 100%;
     margin-bottom: 32px;
-    padding: 18px 0;
+    padding: 16px 0 20px;
     font-size: 18px;
     font-weight: bold;
     line-height: 18px;
@@ -327,7 +337,8 @@ a {
   letter-spacing: 1px; }
 
 .information__text {
-  margin-bottom: 29px; }
+  margin-top: 12px;
+  margin-bottom: 30px; }
 
 .information__image {
   position: absolute;
@@ -351,7 +362,7 @@ a {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin: 0;
-  padding: 40px 0 0;
+  padding: 42px 0 0;
   background-color: #ffffff;
   text-align: center;
   line-height: 30px;
@@ -525,8 +536,9 @@ a {
 
 .contest__title {
   margin: 0;
-  padding: 30px 6.25% 54px;
-  background: url("../img/bg-back-mobile@1x.jpg") 0% 25% no-repeat;
+  padding: 99px 6.25% 54px;
+  background: url("../img/bg-back-mobile@1x.jpg") 0 -1% no-repeat;
+  background-size: 100% auto;
   text-align: center;
   font-size: 24px;
   font-weight: lighter;
@@ -535,7 +547,7 @@ a {
 
 .contest__info {
   margin: 0;
-  padding: 45px 6.25% 0;
+  padding: 45px 6.25% 2px;
   text-align: center; }
 
 .form {
@@ -543,14 +555,15 @@ a {
 
 .form__group {
   margin: 0;
-  padding: 18px 6.25% 40px;
+  padding: 16px 6.25% 40px;
   border: none;
   background-color: #ffffff; }
   .form__group--check {
-    padding-bottom: 22px;
+    padding-bottom: 20px;
     background-color: #f2f2f2; }
   .form__group:last-of-type {
-    padding-bottom: 38px; }
+    padding-bottom: 38px;
+    padding-top: 20px; }
 
 .form__list {
   margin: 0;
@@ -580,7 +593,7 @@ a {
 
 .form__text {
   width: 100%;
-  padding: 24px 19px 22px;
+  padding: 22px 19px;
   border: 2px solid #e5e5e5; }
   .form__text::-webkit-input-placeholder {
     font-size: 18px;
@@ -613,12 +626,12 @@ a {
   display: none; }
 
 .form__label {
-  padding: 27px 0 25px 70px;
+  padding: 25px 0 27px 70px;
   color: #283645;
   font-size: 18px; }
   .form__label--radio {
-    padding-top: 18px;
-    padding-bottom: 27px; }
+    padding-top: 21px;
+    padding-bottom: 25px; }
   .form__label--check::before {
     content: "";
     position: absolute;
@@ -633,8 +646,8 @@ a {
     content: "";
     position: absolute;
     left: 2px;
-    width: 35px;
-    height: 35px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     -webkit-box-shadow: 0 0 0 2px #e5e5e5;
             box-shadow: 0 0 0 2px #e5e5e5;
@@ -644,19 +657,19 @@ a {
   background: #ffffff url("../img/icon-yes.svg") 50% 50% no-repeat; }
 
 .form__choice:checked + .form__label--radio::before {
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   background-color: #d22856;
   border: 10.5px solid #ffffff; }
 
 .form__send {
-  margin-bottom: 9px;
+  margin-bottom: 6px;
   padding: 0 6.25%;
   background-color: #ffffff; }
 
 .form__note {
   margin: 0;
-  padding: 33px 0 0;
+  padding: 35px 0 0;
   text-align: center;
   text-transform: uppercase;
   color: #283645; }
@@ -761,16 +774,17 @@ a {
 
 .photo__title {
   margin: 0;
-  padding: 28px 6.25% 80px;
-  background: url("../img/bg-back-mobile@1x.jpg") 0% 25% no-repeat;
+  padding: 99px 6.25% 81px;
   text-align: center;
   font-size: 24px;
   line-height: 30px;
-  font-weight: lighter;
-  color: #ffffff; }
+  font-weight: 100;
+  color: #ffffff;
+  background: url("../img/bg-back-mobile@1x.jpg") 0 -1% no-repeat;
+  background-size: 100% auto; }
 
 .photo__text {
-  padding: 33px 35px;
+  padding: 32px 35px 34px;
   text-align: center;
   line-height: 30px;
   color: #283645; }
@@ -853,7 +867,7 @@ a {
 
 .edit__text {
   margin: 20px 0;
-  padding: 4px 0 43px;
+  padding: 3px 0 43px;
   text-align: center;
   line-height: 30px;
   color: #283645;
@@ -877,7 +891,7 @@ a {
   border-bottom: 1px solid #dddfe0; }
 
 .edit__type {
-  margin: 30px 15px 60px;
+  margin: 30px 15px 73px;
   display: block;
   width: 50px;
   height: 50px;
@@ -920,7 +934,7 @@ a {
     position: absolute;
     z-index: 1;
     top: 110px;
-    left: 230px;
+    left: 232px;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -933,7 +947,7 @@ a {
     position: absolute;
     z-index: 1;
     top: 110px;
-    left: 230px;
+    left: 232px;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -946,7 +960,7 @@ a {
     position: absolute;
     z-index: 1;
     top: 110px;
-    left: 230px;
+    left: 232px;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -959,7 +973,7 @@ a {
 
 .edit__buttons {
   margin-bottom: -10px;
-  padding: 50px 6.25% 33px; }
+  padding: 37px 6.25% 33px; }
 
 .edit__button {
   width: 100%;
@@ -971,7 +985,8 @@ a {
   color: #d22856;
   border: 4px solid #d22856;
   border-radius: 50px;
-  background-color: #f2f2f2; }
+  background-color: #f2f2f2;
+  letter-spacing: 1px; }
   .edit__button--disabled {
     border-color: #dddfe0;
     color: #dddfe0; }
