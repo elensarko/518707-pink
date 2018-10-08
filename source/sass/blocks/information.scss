@@ -1,0 +1,50 @@
+.information {
+  position: relative;
+  background-color: $gray;
+  color: $blue;
+  text-align: center;
+}
+
+.information__header {
+  margin: 0;
+  padding: 15px 6.25% 5px;
+  font-size: 24px;
+  line-height: 30px;
+  background-color: $white;
+  font-weight: lighter;
+}
+
+.information__intro {
+  margin-bottom: 27px;
+}
+
+.information__list {
+  @include list-reset;
+  padding: 80px $content-padding 288px;
+  background: $gray url("../img/bg-triangle-white.svg") 0 0 no-repeat;
+  background-size: 100% auto;
+}
+
+.information__item {
+  text-align: center;
+}
+
+.information__title {
+  margin: 0;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+
+.information__text {
+  margin-top: 12px;
+  margin-bottom: 30px;
+}
+
+.information__image {
+  position: absolute;
+  bottom: -42px;
+  left: 82px;
+}

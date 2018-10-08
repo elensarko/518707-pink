@@ -1,0 +1,101 @@
+.photo__title {
+  margin: 0;
+  padding: 99px $content-padding 81px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 100;
+  color: $white;
+  background: url("../img/bg-back-mobile@1x.jpg") 0 -1% no-repeat;
+  background-size: 100% auto;
+}
+
+.photo__text {
+  padding: 32px 35px 34px;
+  text-align: center;
+  line-height: 30px;
+  color: $blue;
+}
+
+.photo__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo__item {
+  position: relative;
+  width: 100%;
+}
+
+.photo__link--panorama::before {
+  content: "Панорама дня";
+  position: absolute;
+  top: 0;
+  right: $content-padding;
+  min-width: 140px;
+  padding: 6px 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $pink;
+}
+
+.photo__image {
+  margin: 0 $content-padding;
+
+  &--panorama {
+    margin: 0;
+  }
+}
+
+.photo__comment-wrapper {
+  margin: -7px 20px 20px 20px;
+  padding: 18px 10px 19px 17px;
+  background-color: $gray;
+  color: $blue;
+}
+
+.photo__comment {
+  margin: 0;
+}
+
+.photo__author-wrapper {
+  margin: 0;
+}
+
+.photo__comment-author {
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.photo__comment-time {
+  font-size: 12px;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.photo__comment-text {
+  margin: 0;
+}
+
+.photo__comment-like {
+  position: relative;
+  margin: 10px 32px 0;
+  font-size: 12px;
+  color: $pink;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -31px;
+    top: 6px;
+    width: 13px;
+    height: 12px;
+    background: url("../img/icon-heart.svg");
+  }
+}

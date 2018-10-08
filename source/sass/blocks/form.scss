@@ -1,0 +1,140 @@
+.form {
+  background-color: $gray;
+}
+
+.form__group {
+  margin: 0;
+  padding: 16px $content-padding 40px;
+  border: none;
+  background-color: $white;
+
+  &--check {
+    padding-bottom: 20px;
+    background-color: $gray;
+  }
+
+  &:last-of-type {
+    padding-bottom: 38px;
+    padding-top: 20px;
+  }
+}
+
+.form__list {
+  @include list-reset;
+}
+
+.form__item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.form__text-label {
+  padding: 16px 21px 5px;
+  width: 100%;
+  color: $pink;
+  text-transform: uppercase;
+
+  &--area {
+    padding: 14px 0 10px;
+    display: block;
+    text-align: center;
+  }
+}
+
+.form__text {
+  width: 100%;
+  padding: 22px 19px;
+  border: 2px solid #e5e5e5;
+
+  &::placeholder {
+    font-size: 18px;
+    line-height: 30px;
+    color: $blue;
+  }
+
+  &--area {
+    padding-top: 15px;
+    box-sizing: border-box;
+    min-height: 200px;
+  }
+}
+
+.form__title {
+  padding: 40px 20px 0;
+  display: block;
+  background-color: $gray;
+  text-align: center;
+  color: $pink;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.form__choice {
+  display: none;
+}
+
+.form__label {
+  padding: 25px 0 27px 70px;
+  color: $blue;
+  font-size: 18px;
+
+  &--radio {
+    padding-top: 21px;
+    padding-bottom: 25px;
+  }
+
+  &--check::before {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: 23px;
+    width: 35px;
+    height: 35px;
+    box-shadow: 0 0 0 2px #e5e5e5;
+    background-color: $white;
+  }
+
+  &--radio::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #e5e5e5;
+    background-color: $white;
+  }
+}
+
+.form__choice:checked + .form__label {
+  &--check::before {
+    background: $white url("../img/icon-yes.svg") 50% 50% no-repeat;
+  }
+
+  &--radio::before {
+    width: 15px;
+    height: 15px;
+    background-color: $pink;
+    border: 10.5px solid $white;
+  }
+}
+
+.form__send {
+  margin-bottom: 6px;
+  padding: 0 $content-padding;
+  background-color: $white;
+}
+
+.form__note {
+  margin: 0;
+  padding: 35px 0 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: $blue;
+
+  span {
+    color: $pink;
+  }
+}
