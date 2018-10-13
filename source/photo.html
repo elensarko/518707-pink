@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -32,7 +33,7 @@
         <h1 class="photo__title">Фотографии пользователей</h1>
         <p class="photo__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         <ul class="photo__list">
-          <li class="photo__item">
+          <li class="photo__item photo__item--panorama">
             <a class="photo__link photo__link--panorama" href="#">
               <img class="photo__image photo__image--panorama" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="">
             </a>
@@ -157,29 +158,31 @@
       <section class="edit">
         <p class="edit__text">Затмите их всех!
           Выкладывайте&nbsp;все,&nbsp;что&nbsp;накопилось&nbsp;в телефоне!</p>
-        <p class="edit__photo">
-          <img class="edit__photo-image" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Ваша фотография">
-        </p>
-        <form class="edit__form" action="https://echo.htmlacademy.ru" method="post">
-          <ul class="edit__list">
-            <li class="edit__item">
-              <label class="edit__type edit__type--crop edit__type--active" for="crop">Обрезка</label>
-              <input class="edit__control edit__control--active" name="crop" id="crop" type="range">
-            </li>
-            <li class="edit__item">
-              <label class="edit__type edit__type--fill" for="fill">Заливка</label>
-              <input class="edit__control" name="fill" id="fill" type="range">
-            </li>
-            <li class="edit__item">
-              <label class="edit__type edit__type--contrast" for="contrast">Контраст</label>
-              <input class="edit__control" name="contrast" id="contrast" type="range">
-            </li>
-          </ul>
-          <div class="edit__buttons">
-            <button class="edit__button" type="submit">Запостить</button>
-            <button class="edit__button edit__button--disabled" type="reset">Отмена</button>
-          </div>
-        </form>
+        <div class="edit__wrapper">
+          <p class="edit__photo">
+            <img class="edit__photo-image" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Ваша фотография">
+          </p>
+          <form class="edit__form" action="https://echo.htmlacademy.ru" method="post">
+            <ul class="edit__list">
+              <li class="edit__item">
+                <label class="edit__type edit__type--crop edit__type--active" for="crop">Обрезка</label>
+                <input class="edit__control edit__control--active" name="crop" id="crop" type="range">
+              </li>
+              <li class="edit__item">
+                <label class="edit__type edit__type--fill" for="fill">Заливка</label>
+                <input class="edit__control" name="fill" id="fill" type="range">
+              </li>
+              <li class="edit__item">
+                <label class="edit__type edit__type--contrast" for="contrast">Контраст</label>
+                <input class="edit__control" name="contrast" id="contrast" type="range">
+              </li>
+            </ul>
+            <div class="edit__buttons">
+              <button class="edit__button" type="submit">Запостить</button>
+              <button class="edit__button edit__button--disabled" type="reset">Отмена</button>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
 

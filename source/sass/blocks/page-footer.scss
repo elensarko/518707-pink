@@ -26,3 +26,36 @@
   width: 26px;
   height: 34px;
 }
+
+.page-main--index + .page-footer {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main--index + .page-footer {
+    display: flex;
+  }
+
+  .page-footer {
+    padding: 0 $content-padding 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .page-footer__social {
+    padding-right: 20px;
+    padding-top: 41px;
+  }
+
+  .page-footer__author {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    padding: 20px 130px 30px;
+  }
+}

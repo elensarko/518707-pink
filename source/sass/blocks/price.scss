@@ -7,7 +7,7 @@
 
 .price__list {
   @include list-reset;
-  transform: translateX(-280px);
+  transform: translateX(-100%);
   display: flex;
 }
 
@@ -85,5 +85,114 @@
     height: 28px;
     background: url("../img/icon-no.svg") 50% 50% no-repeat;
     background-size: 32px 23px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .price__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .price__list {
+    transform: translateX(0);
+  }
+
+  .price__item {
+    width: 155px;
+  }
+
+  .price__item:first-child .price__option {
+    &:nth-child(1)::before {
+      content: "Розовый фильтр";
+      padding: 15px 15px 14px;
+      position: absolute;
+      width: 123px;
+      left: -155px;
+      top: 0;
+      font-size: 14px;
+      text-transform: none;
+      background-color: $white;
+    }
+
+    &:nth-child(2)::before {
+      content: "Смайлики";
+      padding: 15px 15px 14px;
+      position: absolute;
+      width: 123px;
+      left: -155px;
+      top: 61px;
+      font-size: 14px;
+      text-transform: none;
+      background-color: $white;
+    }
+
+    &:nth-child(3)::before {
+      content: "Комментарии";
+      padding: 15px 15px 14px;
+      position: absolute;
+      width: 123px;
+      left: -155px;
+      bottom: 0;
+      font-size: 14px;
+      text-transform: none;
+      background-color: $white;
+    }
+  }
+
+  .price__title {
+    font-size: 16px;
+  }
+
+  .price__value {
+    font-size: 18px;
+  }
+
+  .price__option {
+    font-size: 0;
+
+    &::after {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+
+  .price__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .price {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
+  .price__item {
+    width: 234px;
+  }
+
+  .price__item:first-child .price__option {
+    &:nth-child(1)::before {
+      left: -237px;
+      width: 205px;
+      padding-left: 23px;
+      font-size: 18px;
+    }
+
+    &:nth-child(2)::before {
+      left: -237px;
+      width: 205px;
+      padding-left: 23px;
+      font-size: 18px;
+    }
+
+    &:nth-child(3)::before {
+      left: -237px;
+      width: 205px;
+      padding-left: 23px;
+      font-size: 18px;
+    }
   }
 }
