@@ -1,12 +1,12 @@
 .photo__title {
   margin: 0;
-  padding: 99px $content-padding 81px;
+  padding: 99px 10% 81px;
   text-align: center;
   font-size: 24px;
   line-height: 30px;
   font-weight: 100;
   color: $white;
-  background: url("../img/bg-back-mobile@1x.jpg") 0 -1% no-repeat;
+  background: url("../img/bg-back-mobile@1x.jpg") center 0 no-repeat;
   background-size: 100% auto;
 }
 
@@ -21,11 +21,15 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .photo__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
   position: relative;
-  width: 100%;
 }
 
 .photo__link--panorama::before {
@@ -43,23 +47,23 @@
   background-color: $pink;
 }
 
-.photo__image {
-  margin: 0 $content-padding;
-
-  &--panorama {
-    margin: 0;
-  }
-}
-
 .photo__comment-wrapper {
-  margin: -7px 20px 20px 20px;
+  width: 100%;
+  flex-grow: 1;
+  margin: -7px 20px 20px;
   padding: 18px 10px 19px 17px;
   background-color: $gray;
   color: $blue;
+  box-sizing: border-box;
+}
+
+.photo__image {
+  width: 100%;
 }
 
 .photo__comment {
   margin: 0;
+  width: 100%;
 }
 
 .photo__author-wrapper {
@@ -69,12 +73,11 @@
 .photo__comment-author {
   font-style: normal;
   font-weight: bold;
-  letter-spacing: 1px;
 }
 
 .photo__comment-time {
   font-size: 12px;
-  font-weight: lighter;
+  font-weight: 100;
   text-transform: uppercase;
 }
 
@@ -97,5 +100,59 @@
     width: 13px;
     height: 12px;
     background: url("../img/icon-heart.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .photo__title {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .photo__text {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .photo__list {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .photo__item {
+    width: 300px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &--panorama {
+      width: 100%;
+    }
+  }
+
+  .photo__comment-wrapper {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photo__list {
+    padding: 0 130px;
+  }
+
+  .photo__item {
+    width: 300px;
+    margin-bottom: 54px;
+
+    &--panorama {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  .photo__comment-wrapper {
+    max-width: 900px;
   }
 }

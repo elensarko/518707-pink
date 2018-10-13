@@ -31,26 +31,26 @@
       <h1 class="contest__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
       <p class="contest__info">Поделитесь своей историей и получите шанс выиграть ценный приз &#8212; 1000 миль на вашу бонусную карту!</p>
       <form class="contest__form form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="form__group form__group--no-title">
+        <fieldset class="form__group form__group--name">
           <ul class="form__list">
-            <li class="form__item">
+            <li class="form__item form__item--name">
               <label class="form__text-label" for="last-name">Фамилия:</label>
               <input class="form__text" name="last-name" id="last-name" type="text" placeholder="Укажите фамилию*" required>
             </li>
-            <li class="form__item">
+            <li class="form__item form__item--name">
               <label class="form__text-label" for="first-name">Имя:</label>
               <input class="form__text" name="first-name" id="first-name" type="text" placeholder="Введите ваше имя*" required>
             </li>
-            <li class="form__item">
+            <li class="form__item form__item--name">
               <label class="form__text-label" for="fathers-name">Отчество:</label>
               <input class="form__text" name="fathers-name" id="fathers-name" type="text" placeholder="Ну и отчество тоже">
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="form__group form__group--check">
+        <fieldset class="form__group form__group--check form__group--checkbox">
           <legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
-          <ul class="form__list">
+          <ul class="form__list form__list--checkbox">
             <li class="form__item">
               <input class="form__choice" name="selfie" id="selfie" type="checkbox" checked>
               <label class="form__label form__label--check" for="selfie">Сделал селфи с акулой</label>
@@ -78,20 +78,21 @@
           </ul>
         </fieldset>
 
-        <fieldset class="form__group form__group--no-title">
-          <ul class="form__list">
-            <li class="form__item">
+        <fieldset class="form__group form__group--contacts">
+          <legend class="form__title form__title--add">Контактная информация</legend>
+          <ul class="form__list form__list--contacts">
+            <li class="form__item form__item--contacts">
               <label class="form__text-label" for="phone">Номер телефона</label>
               <input class="form__text" name="phone" id="phone" placeholder="Номер, пожалуйста" type="tel">
             </li>
-            <li class="form__item">
+            <li class="form__item form__item--contacts">
               <label class="form__text-label" for="mail">Адрес почты</label>
-              <input class="form__text" name="mail" id="mail" placeholder="Введите почту*" type="email" required>
+              <input class="form__text" name="mail" id="mail" placeholder="Введите почту *" type="email" required>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="form__group form__group--check">
+        <fieldset class="form__group form__group--check form__group--radio">
           <legend class="form__title">С каким приложением путешествовали?</legend>
           <ul class="form__list">
             <li class="form__item">
@@ -109,14 +110,16 @@
           </ul>
         </fieldset>
 
-        <fieldset class="form__group form__group--no-title">
-          <label class="form__text-label form__text-label--area" for="review">Опишите свои эмоции</label>
+        <fieldset class="form__group form__group--text-area">
+          <legend class="form__title form__title--text-area">
+            <label class="form__text-label" for="review">Опишите свои эмоции</label>
+          </legend>
           <textarea class="form__text form__text--area" name="review" id="review" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </fieldset>
         <div class="form__send">
           <button class="form__button button" type="submit">Отправить форму</button>
 
-          <p class="form__note"><span>*</span> &#8212; Обязательные поля</p>
+          <p class="form__note"><span>*</span> &#8212; Обязательные <span class="form__hide">для заполнения</span> поля</p>
         </div>
       </form>
     </main>

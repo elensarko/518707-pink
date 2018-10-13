@@ -1,12 +1,25 @@
 .download {
+  position: relative;
+  z-index: 10;
   margin: 0;
-  padding: 28px 6.25% 30px;
+  padding: 28px $content-padding 30px;
   background-color: #1d2631;
+}
+
+.download__title {
+  display: none;
+  margin: 0;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 100;
+  line-height: 50px;
+  color: $white;
 }
 
 .download__list {
   @include list-reset;
-  margin-bottom: 23px;
+  width: 280px;
+  margin: 0 auto 23px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -30,7 +43,6 @@
     font-size: 18px;
     font-weight: bold;
     line-height: 18px;
-    letter-spacing: 1px;
     color: $white;
     box-shadow: inset 0 0 0 3px $white;
     border-radius: 50px;
@@ -73,4 +85,23 @@
   text-align: center;
   font-weight: lighter;
   color: $white;
+}
+
+@media (min-width: $tablet-width) {
+  .download {
+    width: 300px;
+    padding-bottom: 110px;
+    background-color: transparent;
+  }
+
+  .download__title {
+    display: block;
+    margin: 150px 30px 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .download {
+    padding-left: 130px;
+  }
 }

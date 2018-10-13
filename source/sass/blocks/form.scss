@@ -64,11 +64,14 @@
 .form__title {
   padding: 40px 20px 0;
   display: block;
-  background-color: $gray;
   text-align: center;
   color: $pink;
   line-height: 18px;
   text-transform: uppercase;
+
+  &--add {
+    display: none;
+  }
 }
 
 .form__choice {
@@ -136,5 +139,140 @@
 
   span {
     color: $pink;
+  }
+}
+
+.form__hide {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: $white;
+  }
+
+  .form__group {
+    margin: 20px;
+    padding: 20px 60px;
+    background-color: $white;
+    border: 2px solid $gray;
+    order: 3;
+
+    &--checkbox {
+      order: 4;
+    }
+
+    &--radio {
+      order: 2;
+    }
+
+    &--name {
+      padding: 0;
+      border: none;
+      order: 1;
+    }
+
+    &--text-area {
+      order: 5;
+    }
+  }
+
+  .form__group--name .form__text-label {
+    padding-left: 0;
+  }
+
+  .form__title {
+    padding-top: 0;
+
+    &--add {
+      display: block;
+    }
+  }
+
+  .form__item--name .form__text-label {
+    width: auto;
+  }
+
+  .form__item--name .form__text {
+    width: auto;
+    margin: 20px 0;
+    flex-grow: 1;
+  }
+
+  .form__item--contacts .form__text {
+    order: -1;
+    margin-top: 10px;
+  }
+
+  .form__send {
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    order: 6;
+  }
+
+  .form__note {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    padding-left: 110px;
+    padding-right: 110px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form__group {
+    width: 100%;
+    margin: 20px 0;
+
+    &--name {
+      width: 450px;
+    }
+
+    &--radio {
+      width: 340px;
+    }
+  }
+
+  .form__list--contacts {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__list--contacts .form__item {
+    width: 46%;
+  }
+
+  .form__list--checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__list--checkbox .form__item {
+    flex-grow: 1;
+    width: 33%;
+    order: 1;
+
+    &:nth-child(2n) {
+      order: 2;
+    }
+  }
+
+  .form__send {
+    width: 100%;
+  }
+
+  .form__note .form__hide {
+    display: inline;
+    color: $blue;
   }
 }

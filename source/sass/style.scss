@@ -1,13 +1,14 @@
 @charset "utf-8";
 @import "normalize";
-@import "global";
 @import "variables";
 @import "mixins";
+@import "global";
 @import "blocks/page-header";
 @import "blocks/main-nav";
 @import "blocks/intro";
 @import "blocks/download";
 @import "blocks/information";
+@import "blocks/effect";
 @import "blocks/reviews";
 @import "blocks/slider";
 @import "blocks/price";
