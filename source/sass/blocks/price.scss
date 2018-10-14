@@ -1,8 +1,8 @@
 .price {
-  padding: 91px $content-padding 6px;
+  padding: 90px $content-padding 6px;
   overflow: hidden;
   background: $gray url("../img/bg-triangle-white.svg") 0 0 no-repeat;
-  background-size: 99% auto;
+  background-size: 110% auto;
 }
 
 .price__list {
@@ -51,7 +51,7 @@
 }
 
 .price__value {
-  margin: 0;
+  margin: 2px 0 0;
   font-size: 24px;
   font-weight: lighter;
 }
@@ -66,29 +66,47 @@
   padding: 15px 22px 14px;
   margin-bottom: 2px;
   background-color: $white;
+  outline: 2px solid #e5e5e5;
 
   &::after {
     content: "";
     position: absolute;
-    right: 16px;
+    right: 17px;
     width: 31px;
     height: 31px;
     background: url("../img/icon-yes.svg") 50% 50% no-repeat;
-    background-size: 32px 23px;
+    background-size: 31px 23px;
   }
 
   &--unavailable::after {
-    content: "";
-    position: absolute;
-    right: 16px;
-    width: 31px;
-    height: 28px;
-    background: url("../img/icon-no.svg") 50% 50% no-repeat;
-    background-size: 32px 23px;
+    background-image: url("../img/icon-no.svg");
+    background-size: 30px 30px;
   }
 }
 
 @media (min-width: $tablet-width) {
+  .price {
+    padding-bottom: 50px;
+  }
+
+  .price__header {
+    padding-top: 12px;
+    padding-bottom: 1px;
+
+    &--is-hit::before {
+      content: url("../../img/bg-hit-tablet.svg");
+    }
+
+    &--is-hit::after {
+      top: 4px;
+      left: 6px;
+    }
+  }
+
+  .price__value {
+    margin: -3px -1px 10px 0;
+  }
+
   .price__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -100,13 +118,13 @@
   }
 
   .price__item {
-    width: 155px;
+    width: 153px;
   }
 
   .price__item:first-child .price__option {
     &:nth-child(1)::before {
       content: "Розовый фильтр";
-      padding: 15px 15px 14px;
+      padding: 7px 15px;
       position: absolute;
       width: 123px;
       left: -155px;
@@ -114,23 +132,25 @@
       font-size: 14px;
       text-transform: none;
       background-color: $white;
+      outline: 2px solid #e5e5e5;
     }
 
     &:nth-child(2)::before {
       content: "Смайлики";
-      padding: 15px 15px 14px;
+      padding: 7px 15px;
       position: absolute;
       width: 123px;
       left: -155px;
-      top: 61px;
+      top: 46px;
       font-size: 14px;
       text-transform: none;
       background-color: $white;
+      outline: 2px solid #e5e5e5;
     }
 
     &:nth-child(3)::before {
       content: "Комментарии";
-      padding: 15px 15px 14px;
+      padding: 7px 15px;
       position: absolute;
       width: 123px;
       left: -155px;
@@ -138,6 +158,7 @@
       font-size: 14px;
       text-transform: none;
       background-color: $white;
+      outline: 2px solid #e5e5e5;
     }
   }
 
@@ -150,6 +171,7 @@
   }
 
   .price__option {
+    padding: 7px;
     font-size: 0;
 
     &::after {

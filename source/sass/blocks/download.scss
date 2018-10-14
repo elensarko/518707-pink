@@ -1,3 +1,7 @@
+.intro-download {
+  position: relative;
+}
+
 .download {
   position: relative;
   z-index: 10;
@@ -12,14 +16,13 @@
   text-align: center;
   font-size: 40px;
   font-weight: 100;
-  line-height: 50px;
+  line-height: 48px;
   color: $white;
 }
 
 .download__list {
   @include list-reset;
   width: 280px;
-  margin: 0 auto 23px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -39,7 +42,7 @@
   &--default {
     width: 100%;
     margin-bottom: 32px;
-    padding: 16px 0 20px;
+    padding: 18px 0 19px;
     font-size: 18px;
     font-weight: bold;
     line-height: 18px;
@@ -68,35 +71,64 @@
 
   &--android {
     width: 43px;
-    height: 47px;
+    height: 52px;
     background: url("../img/logo-android.svg") 50% 50% no-repeat;
   }
 
   &--windows {
     margin-right: 38px;
     width: 44px;
-    height: 41px;
+    height: 46px;
     background: url("../img/logo-microsoft.svg") 50% 50% no-repeat;
   }
 }
 
 .download__info {
   @include indent-reset;
+  margin-top: 23px;
   text-align: center;
-  font-weight: lighter;
+  font-weight: 100;
   color: $white;
 }
 
 @media (min-width: $tablet-width) {
   .download {
+    position: absolute;
+    bottom: 0;
     width: 300px;
     padding-bottom: 110px;
     background-color: transparent;
   }
 
+  .download__list {
+    width: 100%;
+    margin-bottom: 36px;
+  }
+
+  .download__link {
+
+    &--default {
+      margin-bottom: 46px
+    }
+
+    &--ios {
+      margin-left: 45px;
+    }
+
+    &--windows {
+      margin-right: 49px;
+    }
+  }
+
   .download__title {
     display: block;
     margin: 150px 30px 30px;
+  }
+
+  .download__info {
+    font-size: 18px;
+    line-height: 24px;
+    color: rgba($white, 0.7%);
   }
 }
 

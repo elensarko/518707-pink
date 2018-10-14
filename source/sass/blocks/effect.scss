@@ -1,8 +1,8 @@
 .effect {
   position: relative;
   display: none;
-  padding: 100px $content-padding;
-  margin: 0;
+  padding: 0;
+  margin: 96px $content-padding 73px;
   background-color: $white;
 }
 
@@ -13,8 +13,8 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: 72px;
-    left: $content-padding;
+    bottom: -27px;
+    left: 0;
     width: 238px;
     height: 276px;
     background: url("../img/icon-timer.svg") 50% 50% no-repeat;
@@ -24,8 +24,8 @@
   &::after {
     content: "24";
     position: absolute;
-    left: 38px;
-    bottom: 92px;
+    left: 19px;
+    bottom: -8px;
     width: 202px;
     height: 202px;
     text-align: center;
@@ -44,6 +44,7 @@
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
+  color: $black;
 }
 
 .effect__text {
@@ -60,6 +61,8 @@
   .effect {
     display: block;
   }
+
+
 }
 
 @media (min-width: $desktop-width) {

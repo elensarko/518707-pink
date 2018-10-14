@@ -34,7 +34,7 @@
 }
 
 .reviews__text {
-  margin: 13px 0;
+  margin: 10px 0 15px;
 }
 
 @media (min-width: $tablet-width) {
@@ -49,12 +49,18 @@
     order: 1;
   }
 
+  .reviews__author-name {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   .reviews__author-info {
     display: block;
     margin: 0;
   }
 
   .reviews__text {
+    margin-bottom: 35px;
     font-size: 18px;
   }
 }

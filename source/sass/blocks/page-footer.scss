@@ -1,6 +1,15 @@
 .page-footer {
   padding: 48px 0;
   text-align: center;
+
+  &--index {
+    display: none;
+  }
+}
+
+.page-footer__logo-image {
+  width: 146px;
+  height: 40px;
 }
 
 .page-footer__social {
@@ -27,15 +36,7 @@
   height: 34px;
 }
 
-.page-main--index + .page-footer {
-  display: none;
-}
-
 @media (min-width: $tablet-width) {
-  .page-main--index + .page-footer {
-    display: flex;
-  }
-
   .page-footer {
     padding: 0 $content-padding 10px;
     display: flex;
