@@ -67,9 +67,8 @@
 
 @media (min-width: $desktop-width) {
   .effect {
-    padding-top: 70px;
-    padding-left: 130px;
-    padding-right: 130px;
+    margin: 0;
+    padding: 66px 130px 115px;
     background-color: $gray;
   }
 
@@ -80,7 +79,7 @@
 
     &::before {
       left: 130px;
-      bottom: 55px;
+      bottom: 68px;
       width: 298px;
       height: 345px;
     }
@@ -88,8 +87,8 @@
     &::after {
       width: 253px;
       height: 253px;
-      left: 154px;
-      bottom: 77px;
+      left: 153px;
+      bottom: 90px;
       font-size: 120px;
       line-height: 240px;
       box-shadow: inset 0 0 0 18px $pink;
@@ -101,6 +100,6 @@
   }
 
   .effect__text {
-    margin: 20px 0 30px;
+    margin: 21px 0 30px;
   }
 }

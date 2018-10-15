@@ -57,6 +57,18 @@
 
 @media (min-width: $desktop-width) {
   .page-footer {
-    padding: 20px 130px 30px;
+    padding: 32px 130px 30px;
+  }
+
+  .page-footer__social {
+    padding: 46px 0 31px 5px;
+  }
+
+  .page-footer__text {
+    font-size: 18px;
+  }
+
+  .page-footer__link {
+    padding-top: 7px;
   }
 }

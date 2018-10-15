@@ -135,5 +135,23 @@
 @media (min-width: $desktop-width) {
   .download {
     padding-left: 130px;
+    bottom: 13px;
+  }
+
+  .download__title {
+    margin-bottom: 50px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .download__list {
+    margin-bottom: 55px;
+  }
+
+  .download__item--default {
+    margin-bottom: 22px;
+    font-size: 21px;
+    line-height: 18px;
+    letter-spacing: 2px;
   }
 }
