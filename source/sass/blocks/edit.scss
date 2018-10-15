@@ -16,13 +16,18 @@
 }
 
 .edit__wrapper {
-  padding: $content-padding;
+  padding: 5px $content-padding 9px;
   width: 100%;
   background-color: $gray;
 }
 
 .edit__photo {
   text-align: center;
+}
+
+.edit__image {
+  width: 280px;
+  height: 374px;
 }
 
 .edit__list {
@@ -36,7 +41,7 @@
 }
 
 .edit__type {
-  margin: 30px 15px 73px;
+  margin: 19px 15px 71px;
   display: block;
   width: 50px;
   height: 50px;
@@ -58,7 +63,8 @@
   &--crop::before {
     content: "";
     position: absolute;
-    top: 117px;
+    top: 104px;
+    left: 40px;
     width: 240px;
     height: 2px;
     background-color: $black;
@@ -68,7 +74,8 @@
     content: "";
     display: none;
     position: absolute;
-    top: 117px;
+    top: 104px;
+    left: 40px;
     width: 240px;
     height: 2px;
     background-color: $black;
@@ -78,7 +85,8 @@
     content: "";
     display: none;
     position: absolute;
-    top: 117px;
+    top: 104px;
+    left: 40px;
     width: 240px;
     height: 2px;
     background-color: $black;
@@ -88,8 +96,8 @@
     content: "";
     position: absolute;
     z-index: 1;
-    top: 110px;
-    left: 60%;
+    top: 98px;
+    left: 72%;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -102,8 +110,8 @@
     display: none;
     position: absolute;
     z-index: 1;
-    top: 110px;
-    left: 232px;
+    top: 98px;
+    left: 72%;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -116,8 +124,8 @@
     display: none;
     position: absolute;
     z-index: 1;
-    top: 110px;
-    left: 232px;
+    top: 98px;
+    left: 72%;
     width: 14px;
     height: 14px;
     border-radius: 50%;
@@ -138,38 +146,53 @@
 
 .edit__button {
   width: 280px;
-  padding: 15px 0;
+  padding: 14px 0 17px;
   margin-bottom: 10px;
   font-size: 18px;
   line-height: 18px;
   font-weight: bold;
   color: $pink;
-  border: 4px solid $pink;
+  border: 3px solid $pink;
   border-radius: 50px;
   background-color: $gray;
 
   &--disabled {
     border-color: #dddfe0;
-    color: #dddfe0;
+    color: #e3e4e4;
   }
 }
 
 @media (min-width: $tablet-width) {
   .edit__wrapper {
+    padding-top: 43px;
+    padding-bottom: 33px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .edit__text {
+    padding: 44px 100px 69px;
+    font-size: 18px;
+  }
+
+  .edit__image {
+    width: 300px;
+    height: 400px;
   }
 
   .edit__form {
-    width: 300px;
+    width: 273px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
   }
 
   .edit__list {
+    width: 273px;
+    align-self: flex-start;
+    padding: 0;
     border-bottom: none;
   }
 
@@ -180,51 +203,72 @@
   }
 
   .edit__type {
-    margin: 20px 0;
-    width: 24px;
-    height: 24px;
+    margin: 20px 0 20px;
+    width: 26px;
+    height: 30px;
     background-size: cover;
+
+    &--crop {
+      background-size: 24px 24px;
+    }
+
+    &--fill {
+      margin: 23px 0 17px;
+      background-size: 24px 24px;
+    }
 
     &--contrast {
       background-size: 16px 16px;
     }
 
     &--crop::before {
-      top: 30px;
-      right: 10px;
-      width: 190px;
+      top: 33px;
+      left: 53px;
+      width: 202px;
     }
 
     &--fill::before {
       display: block;
-      top: 30px;
-      right: 10px;
-      width: 190px;
+      top: 35px;
+      left: 53px;
+      width: 202px;
     }
 
     &--contrast::before {
       display: block;
-      top: 30px;
-      right: 10px;
-      width: 190px;
+      top: 34px;
+      left: 53px;
+      width: 202px;
     }
 
     &--crop::after {
-      top: 24px;
-      left: 200px;
+      top: 27px;
+      left: 199px;
     }
 
     &--fill::after {
       display: block;
-      top: 24px;
-      left: 70px;
+      top: 29px;
+      left: 78px;
     }
 
     &--contrast::after {
       display: block;
-      top: 24px;
-      left: 150px;
+      top: 28px;
+      left: 149px;
     }
+  }
+
+  .edit__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 67px 0 7px;
+  }
+
+  .edit__button {
+    width: 260px;
+    margin-bottom: 24px;
+    text-indent: -6px;
   }
 }
 

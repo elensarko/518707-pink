@@ -15,13 +15,12 @@
 
 .intro__title {
   width: 100%;
-  min-height: 237px;
   margin: 0;
-  padding: 100px $content-padding 0;
+  padding: 100px $content-padding 84px;
   text-align: center;
   font-size: 24px;
   font-weight: 100;
-  line-height: 30px;
+  line-height: 28px;
   color: $white;
   box-sizing: border-box;
 }
@@ -29,7 +28,7 @@
 .intro__text {
   width: 100%;
   margin: 0;
-  padding: 35px;
+  padding: 45px 35px 49px;
   text-align: center;
   line-height: 30px;
   background-color: $white;
@@ -51,15 +50,27 @@
 @media (min-width: $tablet-width) {
   .intro {
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-size: 1200px 725px;
+    background-size: 1200px 727px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
     }
 
     &--index {
-      min-height: 725px;
+      min-height: 727px;
     }
+  }
+
+  .intro__title {
+    padding-top: 180px;
+    padding-bottom: 139px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .intro__text {
+    padding: 93px 50px 75px;
+    font-size: 18px;
   }
 
   .intro__image {

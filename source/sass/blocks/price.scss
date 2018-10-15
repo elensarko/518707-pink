@@ -86,7 +86,7 @@
 
 @media (min-width: $tablet-width) {
   .price {
-    padding-bottom: 50px;
+    padding-bottom: 48px;
   }
 
   .price__header {
@@ -136,7 +136,7 @@
   .price__item:first-child .price__option {
     &:nth-child(1)::before {
       content: "Розовый фильтр";
-      padding: 7px 15px;
+      padding: 8px 15px 7px;
       position: absolute;
       width: 123px;
       left: -155px;
@@ -149,11 +149,11 @@
 
     &:nth-child(2)::before {
       content: "Смайлики";
-      padding: 7px 15px;
+      padding: 8px 15px 7px;
       position: absolute;
       width: 123px;
       left: -155px;
-      top: 46px;
+      top: 47px;
       font-size: 14px;
       text-transform: none;
       background-color: $white;
@@ -162,7 +162,7 @@
 
     &:nth-child(3)::before {
       content: "Комментарии";
-      padding: 7px 15px;
+      padding: 8px 15px 7px;
       position: absolute;
       width: 123px;
       left: -155px;
@@ -183,7 +183,7 @@
   }
 
   .price__option {
-    padding: 7px;
+    padding: 8px 0 7px;
     font-size: 0;
 
     &::after {

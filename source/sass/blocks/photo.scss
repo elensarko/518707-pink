@@ -106,6 +106,7 @@
 
     &--panorama {
       width: 100%;
+      margin-bottom: 30px;
     }
   }
 
@@ -114,13 +115,47 @@
     height: 300px;
 
     &--panorama {
-      width: 100%;
-      height: auto;
+      width: 700px;
+      height: 509px;
     }
   }
 
+  .photo__link--panorama::before {
+    top: 57px;
+    right: 0;
+  }
+
+
   .photo__comment-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    padding: 24px 27px 23px;
+  }
+
+  .photo__comment {
+    min-height: 72px;
+    margin-bottom: auto;
+  }
+
+  .photo__comment-like {
+    margin-top: 12px;
+    margin-left: 0;
+
+    &::before {
+      left: 228px;
+    }
+
+    &--panorama {
+      position: absolute;
+      right: 26px;
+      top: 13px;
+
+      &::before {
+        left: 105px;
+      }
+    }
   }
 }
 
