@@ -95,7 +95,6 @@
   &--crop::after {
     content: "";
     position: absolute;
-    z-index: 1;
     top: 98px;
     left: 72%;
     width: 14px;
@@ -109,7 +108,6 @@
     content: "";
     display: none;
     position: absolute;
-    z-index: 1;
     top: 98px;
     left: 72%;
     width: 14px;
@@ -123,7 +121,6 @@
     content: "";
     display: none;
     position: absolute;
-    z-index: 1;
     top: 98px;
     left: 72%;
     width: 14px;
@@ -203,7 +200,7 @@
   }
 
   .edit__type {
-    margin: 20px 0 20px;
+    margin: 20px 0;
     width: 26px;
     height: 30px;
     background-size: cover;
@@ -273,26 +270,71 @@
 }
 
 @media (min-width: $desktop-width) {
+  .edit__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6px;
+    padding-bottom: 66px;
+  }
+
   .edit__wrapper {
-    margin: 0 130px;
-    justify-content: space-around;
+    margin: 0 130px 27px;
+    padding-right: 60px;
+    padding-left: 80px;
+    padding-bottom: 36px;
   }
 
   .edit__form {
     width: 410px;
+    justify-content: space-between;
+  }
+
+  .edit__list {
+    width: 100%;
+  }
+
+  .edit__type {
+    margin: 10px 0 12px;
+    width: 48px;
+    height: 48px;
+    background-size: 48px 48px;
+
+    &--fill {
+      margin: 13px 0 10px;
+    }
+
+    &--contrast {
+      background-size: 32px 32px;
+    }
+
+    &--crop::after {
+      left: 162px;
+    }
+
+    &--fill::after {
+      left: 340px;
+    }
+
+    &--contrast::after {
+      left: 252px;
+    }
   }
 
   .edit__buttons {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .edit__button {
-    width: 48%;
+    width: 184px;
+    padding-left: 12px;
   }
 
   .edit__type::before {
-    width: 300px;
+    width: 288px;
+    left: 92px;
   }
 }

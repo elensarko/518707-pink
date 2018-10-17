@@ -166,12 +166,17 @@
 
   .photo__item {
     width: 300px;
-    margin-bottom: 54px;
+    margin-bottom: 33px;
 
     &--panorama {
       width: 100%;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
+  }
+
+  .photo__link--panorama::before {
+    top: 54px;
+    right: 0;
   }
 
   .photo__image {
@@ -179,12 +184,16 @@
     height: 400px;
 
     &--panorama {
-      width: 100%;
-      height: auto;
+      width: 1200px;
+      height: 506px;
     }
   }
 
-  .photo__comment-wrapper {
-    max-width: 900px;
+  .photo__comment--panorama {
+    min-height: auto;
+  }
+
+  .photo__comment-like--panorama {
+    margin-right: 36px;
   }
 }

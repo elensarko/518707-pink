@@ -5,6 +5,10 @@
   &--index {
     display: none;
   }
+
+  &--form {
+    padding-top: 49px;
+  }
 }
 
 .page-footer__logo-image {
@@ -62,6 +66,14 @@
 
   .page-footer__social {
     padding: 46px 0 31px 5px;
+
+    &--photo {
+      padding-left: 11px;
+    }
+
+    &--form {
+      padding: 45px 0 32px 15px;
+    }
   }
 
   .page-footer__text {
