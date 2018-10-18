@@ -1,7 +1,6 @@
 .information {
   position: relative;
   background-color: $gray;
-  color: $blue;
   text-align: center;
   overflow: hidden;
 }
@@ -48,10 +47,14 @@
   position: absolute;
   bottom: -42px;
   left: 82px;
+  width: 157px;
+  height: 320px;
 }
 
 @media (min-width: $tablet-width) {
   .information__header {
+    padding-top: 10px;
+    padding-bottom: 42px;
     font-size: 40px;
     line-height: 48px;
   }
@@ -66,10 +69,11 @@
   }
 
   .information__list {
+    padding-top: 79px;
+    padding-bottom: 8px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-bottom: 0;
   }
 
   .information__item {
@@ -77,15 +81,31 @@
     text-align: left;
   }
 
+  .information__image {
+    bottom: 0;
+    left: 20px;
+    width: 268px;
+    height: 481px;
+  }
+
   .information__text {
-    margin-bottom: 35px;
+    margin-bottom: 34px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .information__header {
+    padding-bottom: 67px;
+  }
+
+  .information__intro {
+    margin-top: 57px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
   .information__list {
-    padding-left: 130px;
-    padding-right: 130px;
+    padding: 56px 130px 0;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -107,14 +127,16 @@
   }
 
   .information__text {
-    width: 270px;
+    width: 240px;
     margin-top: 24px;
     margin-bottom: 90px;
   }
 
   .information__image {
     position: relative;
-    bottom: 50px;
-    left: 0;
+    bottom: 48px;
+    left: 2px;
+    width: 292px;
+    height: 302px;
   }
 }

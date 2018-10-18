@@ -1,22 +1,3 @@
-.photo__title {
-  margin: 0;
-  padding: 99px 10% 81px;
-  text-align: center;
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 100;
-  color: $white;
-  background: url("../img/bg-back-mobile@1x.jpg") center 0 no-repeat;
-  background-size: 100% auto;
-}
-
-.photo__text {
-  padding: 32px 35px 34px;
-  text-align: center;
-  line-height: 30px;
-  color: $blue;
-}
-
 .photo__list {
   @include list-reset;
   display: flex;
@@ -58,7 +39,13 @@
 }
 
 .photo__image {
-  width: 100%;
+  width: 280px;
+  height: 180px;
+
+  &--panorama {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .photo__comment {
@@ -104,16 +91,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .photo__title {
-    font-size: 50px;
-    line-height: 60px;
-  }
-
-  .photo__text {
-    padding-left: 110px;
-    padding-right: 110px;
-  }
-
   .photo__list {
     padding-left: 20px;
     padding-right: 20px;
@@ -129,11 +106,56 @@
 
     &--panorama {
       width: 100%;
+      margin-bottom: 30px;
     }
   }
 
+  .photo__image {
+    width: 300px;
+    height: 300px;
+
+    &--panorama {
+      width: 700px;
+      height: 509px;
+    }
+  }
+
+  .photo__link--panorama::before {
+    top: 57px;
+    right: 0;
+  }
+
+
   .photo__comment-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    padding: 24px 27px 23px;
+  }
+
+  .photo__comment {
+    min-height: 72px;
+    margin-bottom: auto;
+  }
+
+  .photo__comment-like {
+    margin-top: 12px;
+    margin-left: 0;
+
+    &::before {
+      left: 228px;
+    }
+
+    &--panorama {
+      position: absolute;
+      right: 26px;
+      top: 13px;
+
+      &::before {
+        left: 105px;
+      }
+    }
   }
 }
 
@@ -144,15 +166,34 @@
 
   .photo__item {
     width: 300px;
-    margin-bottom: 54px;
+    margin-bottom: 33px;
 
     &--panorama {
       width: 100%;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
   }
 
-  .photo__comment-wrapper {
-    max-width: 900px;
+  .photo__link--panorama::before {
+    top: 54px;
+    right: 0;
+  }
+
+  .photo__image {
+    width: 300px;
+    height: 400px;
+
+    &--panorama {
+      width: 1200px;
+      height: 506px;
+    }
+  }
+
+  .photo__comment--panorama {
+    min-height: auto;
+  }
+
+  .photo__comment-like--panorama {
+    margin-right: 36px;
   }
 }

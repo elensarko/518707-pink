@@ -40,6 +40,12 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .main-nav__list {
+    top: 110px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .main-nav__list {
     position: absolute;
