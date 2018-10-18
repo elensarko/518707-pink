@@ -53,6 +53,7 @@
   width: 100%;
   padding: 24px 20px 20px;
   border: 2px solid #e5e5e5;
+  transition: all 0.3s ease-in;
 
   &::placeholder {
     font-size: 18px;
@@ -67,6 +68,15 @@
     padding-left: 18px;
     min-height: 200px;
     box-sizing: border-box;
+  }
+
+  &:hover {
+    border-color: $blue;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $pink;
   }
 }
 
@@ -115,6 +125,7 @@
     height: 35px;
     box-shadow: 0 0 0 2px #e5e5e5;
     background-color: $white;
+    transition: box-shadow 0.3s ease-in;
   }
 
   &--radio::before {
@@ -126,6 +137,7 @@
     border-radius: 50%;
     box-shadow: 0 0 0 2px #e5e5e5;
     background-color: $white;
+    transition: box-shadow 0.3s ease-in;
   }
 }
 
@@ -140,6 +152,16 @@
     background-color: $pink;
     border: 9.5px solid $white;
   }
+}
+
+.form__item:hover .form__label::before,
+.form__item:focus .form__label::before {
+  box-shadow: 0 0 0 2px $blue;
+}
+
+.form__item:active .form__label::before {
+  box-shadow: 0 0 0 2px $pink;
+  transition: none;
 }
 
 .form__send {
@@ -243,7 +265,7 @@
       right: 0;
       display: block;
       width: 62px;
-      height: 62px;
+      height: 64px;
       background: #e5e5e5 url("../img/icon-phone.svg") 50% 50% no-repeat;
       background-size: 20px 19px;
     }
