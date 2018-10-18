@@ -233,30 +233,38 @@
   }
 
   .price__option {
+    min-height: 59px;
     padding: 14px 0 15px;
+    box-sizing: border-box;
   }
 
   .price__item:first-child .price__option {
     &:nth-child(1)::before {
+      min-height: 59px;
       left: -236px;
-      width: 191px;
+      width: 234px;
       padding: 14px 22px 15px;
       font-size: 18px;
+      box-sizing: border-box;
     }
 
     &:nth-child(2)::before {
+      min-height: 59px;
       top: 61px;
       left: -236px;
-      width: 191px;
+      width: 234px;
       padding: 14px 22px 15px;
       font-size: 18px;
+      box-sizing: border-box;
     }
 
     &:nth-child(3)::before {
+      min-height: 59px;
       left: -236px;
-      width: 191px;
+      width: 234px;
       padding: 14px 22px 15px;
       font-size: 18px;
+      box-sizing: border-box;
     }
   }
 }
