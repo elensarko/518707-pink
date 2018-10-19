@@ -74,12 +74,25 @@
   font-weight: 100;
   color: $pink;
   line-height: 30px;
+  transition: all 0.3s ease-in-out;
+
+  &--mail:hover,
+  &--mail:focus {
+    color: $blue;
+    text-decoration: underline;
+  }
+
+  &--mail:active {
+    color: rgba($blue, 0.3%);
+    text-decoration: none;
+    transition: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .contacts {
     padding-bottom: 372px;
-    background: url("../../img/bg-map-tablet@1x.jpg") center -81% no-repeat;
+    background: url("../img/bg-map-tablet@1x.jpg") center -81% no-repeat;
     background-size: 700px 848px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

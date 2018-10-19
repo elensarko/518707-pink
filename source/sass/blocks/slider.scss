@@ -12,9 +12,20 @@
   border: none;
   border-radius: 50%;
   background-color: #bec2c7;
+  cursor: pointer;
 
   &--default {
     box-shadow: 0 0 0 3px $black;
+    background-color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #7e868f;
+  }
+
+  &:active {
+    background-color: #e9ebec;
   }
 }
 
