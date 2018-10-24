@@ -1,6 +1,6 @@
 .intro {
   position: relative;
-  background: url("../img/bg-back-mobile@1x.jpg") center 0 no-repeat;
+  background: $blue url("../img/bg-back-mobile@1x.jpg") center 0 no-repeat;
   background-size: 320px 464px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
