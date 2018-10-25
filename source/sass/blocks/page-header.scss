@@ -24,6 +24,10 @@
   height: 22px;
 }
 
+.page-header__logo:hover .page-header__logo-image {
+  fill: $pink;
+}
+
 .page-header__toggle {
   width: 24px;
   height: 23px;

@@ -23,16 +23,15 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(gulp.dest("build/css"))
-    .pipe(csso())
-    .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("build/css"))
+    // .pipe(csso())
+    // .pipe(rename("style.min.css"))
+    // .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
-//Дописать--------------------
 gulp.task("server", function () {
   server.init({
-    server: "source/",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
@@ -40,7 +39,8 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/*.html").on("change", server.reload);
+  // gulp.watch("source/img/**/*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
 gulp.task("images", function () {
@@ -58,7 +58,15 @@ gulp.task("webp", function () {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("source/img/**/icon-*.svg")
+  return gulp.src([
+    "source/img/**/icon-editor-*.svg",
+    "source/img/**/icon-menu-*.svg",
+    "source/img/**/icon-review-*.svg",
+    "source/img/**/icon-yes.svg",
+    "source/img/**/icon-no.svg",
+    "source/img/**/logo-pink-*.svg",
+    "source/img/**/logo-htmlacademy.svg"
+  ])
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -82,14 +90,17 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**"
+    "source/js/**",
   ], {
     base: "source"
   })
     .pipe(gulp.dest("build"));
 });
 
-gulp.task("start", gulp.series("css", "server"));
+gulp.task("refresh", function (done) {
+  server.reload();
+  done();
+});
 
 gulp.task("build", gulp.series(
   "clean",
@@ -98,3 +109,5 @@ gulp.task("build", gulp.series(
   "sprite",
   "html"
 ));
+
+gulp.task("start", gulp.series("build", "server"));
