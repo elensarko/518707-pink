@@ -40,104 +40,77 @@
   border-bottom: 1px solid #dddfe0;
 }
 
+.edit__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .edit__type {
   margin: 19px 15px 71px;
-  display: block;
+  display: flex;
   width: 50px;
   height: 50px;
-  font-size: 0;
   cursor: pointer;
-
-  &--crop {
-    background: url("../img/icon-editor-crop.svg") 50% 50% no-repeat;
-  }
-
-  &--fill {
-    background: url("../img/icon-editor-fill.svg") 50% 50% no-repeat;
-  }
-
-  &--contrast {
-    background: url("../img/icon-editor-contrast.svg") 50% 50% no-repeat;
-  }
-
-  &--crop::before {
-    content: "";
-    position: absolute;
-    top: 104px;
-    left: 40px;
-    width: 240px;
-    height: 2px;
-    background-color: $black;
-  }
-
-  &--fill::before {
-    content: "";
-    display: none;
-    position: absolute;
-    top: 104px;
-    left: 40px;
-    width: 240px;
-    height: 2px;
-    background-color: $black;
-  }
-
-  &--contrast::before {
-    content: "";
-    display: none;
-    position: absolute;
-    top: 104px;
-    left: 40px;
-    width: 240px;
-    height: 2px;
-    background-color: $black;
-  }
-
-  &--crop::after {
-    content: "";
-    position: absolute;
-    top: 98px;
-    left: 72%;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: $gray;
-    box-shadow: inset 0 0 0 2px $pink;
-  }
-
-  &--fill::after {
-    content: "";
-    display: none;
-    position: absolute;
-    top: 98px;
-    left: 72%;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: $gray;
-    box-shadow: inset 0 0 0 2px $pink;
-  }
-
-  &--contrast::after {
-    content: "";
-    display: none;
-    position: absolute;
-    top: 98px;
-    left: 72%;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: $gray;
-    box-shadow: inset 0 0 0 2px $pink;
-  }
-
-  &:active::after {
-    background-color: $pink;
-  }
 }
 
 .edit__control {
   display: none;
 }
+
+.edit__type-icon {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  fill: #b5b9be;
+
+  &:hover,
+  &:focus {
+    fill: #8d949b;
+  }
+
+  &--fill {
+    margin-top: 2px;
+  }
+
+  &--contrast {
+    width: 32px;
+    height: 32px;
+  }
+
+  &--active {
+    fill: $pink;
+  }
+}
+
+.edit__bar {
+  position: absolute;
+  bottom: 34px;
+  left: 40px;
+  width: 240px;
+  height: 2px;
+  background-color: $blue;
+  cursor: pointer;
+}
+
+.edit__toggle {
+  position: absolute;
+  top: -6px;
+  left: 192px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid $pink;
+  border-radius: 50%;
+  background-color: $white;
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    background-color: $pink;
+  }
+}
+
 
 .edit__buttons {
   margin-bottom: -10px;
@@ -234,56 +207,45 @@
     margin: 20px 0;
     width: 26px;
     height: 30px;
-    background-size: cover;
+  }
 
-    &--crop {
-      background-size: 24px 24px;
-    }
+  .edit__type-icon {
+    width: 24px;
+    height: 24px;
+    fill: $pink;
 
     &--fill {
-      margin: 23px 0 17px;
-      background-size: 24px 24px;
+      margin-top: 5px;
+      width: 26px;
+      height: 26px;
     }
 
     &--contrast {
-      background-size: 16px 16px;
+      width: 16px;
+      height: 16px;
     }
 
-    &--crop::before {
-      top: 33px;
-      left: 53px;
-      width: 202px;
+    &:hover {
+      fill: $pink;
+    }
+  }
+
+  .edit__bar {
+    width: 202px;
+    left: 53px;
+  }
+
+  .edit__toggle {
+    &--crop {
+      left: 146px;
     }
 
-    &--fill::before {
-      display: block;
-      top: 35px;
-      left: 53px;
-      width: 202px;
+    &--fill {
+      left: 25px;
     }
 
-    &--contrast::before {
-      display: block;
-      top: 34px;
-      left: 53px;
-      width: 202px;
-    }
-
-    &--crop::after {
-      top: 27px;
-      left: 199px;
-    }
-
-    &--fill::after {
-      display: block;
-      top: 29px;
-      left: 78px;
-    }
-
-    &--contrast::after {
-      display: block;
-      top: 28px;
-      left: 149px;
+    &--contrast {
+      left: 96px;
     }
   }
 
@@ -329,26 +291,35 @@
     margin: 10px 0 12px;
     width: 48px;
     height: 48px;
-    background-size: 48px 48px;
+  }
+
+  .edit__type-icon {
+    width: 48px;
+    height: 48px;
+
+    &--contrast {
+      width: 32px;
+      height: 32px;
+      margin-left: 6px;
+    }
+  }
+
+  .edit__bar {
+    width: 288px;
+    left: 92px;
+  }
+
+  .edit__toggle {
+    &--crop {
+      left: 70px;
+    }
 
     &--fill {
-      margin: 13px 0 10px;
+      left: 247px;
     }
 
     &--contrast {
-      background-size: 32px 32px;
-    }
-
-    &--crop::after {
-      left: 162px;
-    }
-
-    &--fill::after {
-      left: 340px;
-    }
-
-    &--contrast::after {
-      left: 252px;
+      left: 160px;
     }
   }
 
@@ -362,10 +333,5 @@
   .edit__button {
     width: 184px;
     padding-left: 12px;
-  }
-
-  .edit__type::before {
-    width: 288px;
-    left: 92px;
   }
 }

@@ -39,7 +39,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  // gulp.watch("source/img/**/*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/img/**/*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
@@ -62,8 +62,6 @@ gulp.task("sprite", function () {
     "source/img/**/icon-editor-*.svg",
     "source/img/**/icon-menu-*.svg",
     "source/img/**/icon-review-*.svg",
-    "source/img/**/icon-yes.svg",
-    "source/img/**/icon-no.svg",
     "source/img/**/logo-pink-*.svg",
     "source/img/**/logo-htmlacademy.svg"
   ])

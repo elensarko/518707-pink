@@ -14,7 +14,28 @@
 .page-footer__logo-image {
   width: 146px;
   height: 40px;
+  fill: $blue;
+
+  &:hover,
+  &:focus {
+    fill: $pink;
+  }
+
+  &:active {
+    fill: $blue;
+    opacity: 0.3;
+  }
+
+  &--current:hover,
+  &--current:focus {
+    fill: $blue;
+  }
+
+  &--current:active {
+    opacity: 1;
+  }
 }
+
 
 .page-footer__social {
   @include list-reset;
@@ -38,6 +59,19 @@
   display: block;
   width: 26px;
   height: 34px;
+}
+
+.page-footer__link-logo {
+  fill: $pink;
+
+  &:hover,
+  &:focus {
+    fill: $blue;
+  }
+
+  &:active {
+    fill: #bec2c7;
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -119,8 +119,8 @@
   &--check::before {
     content: "";
     position: absolute;
-    left: 1px;
-    top: 23px;
+    left: 0;
+    top: 25px;
     width: 35px;
     height: 35px;
     box-shadow: 0 0 0 2px #e5e5e5;
@@ -142,8 +142,16 @@
 }
 
 .form__choice:checked + .form__label {
-  &--check::before {
-    background: $white url("../img/icon-yes.svg") 50% 50% no-repeat;
+  &--check::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 35px;
+    width: 20px;
+    height: 8px;
+    border-left: 2px solid $pink;
+    border-bottom: 2px solid $pink;
+    transform: rotate(-45deg);
   }
 
   &--radio::before {

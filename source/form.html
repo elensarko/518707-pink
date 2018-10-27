@@ -10,19 +10,23 @@
     <script src="js/picturefill.js" async></script>
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
           <svg class="page-header__logo-image">
             <use xlink:href="#logo-pink-white-mobile"></use>
+            <use xlink:href="#logo-pink-white-tablet"></use>
+            <use xlink:href="#logo-pink-white-desktop"></use>
           </svg>
-          <!--<picture>-->
-            <!--<source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">-->
-            <!--<source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">-->
-            <!--<img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="74" height="22" alt="Pink">-->
-          <!--</picture>-->
         </a>
-        <button class="page-header__toggle" type="button">Закрыть меню</button>
+        <button class="page-header__toggle" type="button" aria-label="Закрыть меню">
+          <svg class="page-header__toggle-image">
+            <use xlink:href="#icon-menu-cross"></use>
+          </svg>
+        </button>
       </div>
       <nav class="page-header__main-nav main-nav">
         <ul class="main-nav__list">
@@ -144,10 +148,10 @@
 
     <footer class="page-footer page-footer--form">
       <a class="page-footer__logo" href="index.html">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-pink-blue-desktop.svg">
-          <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" alt="Логотип PINK">
-        </picture>
+        <svg class="page-footer__logo-image">
+          <use xlink:href="#logo-pink-blue-mobile"></use>
+          <use xlink:href="#logo-pink-blue-desktop"></use>
+        </svg>
       </a>
       <ul class="page-footer__social page-footer__social--form social">
         <li class="social__item">
@@ -163,7 +167,9 @@
       <address class="page-footer__author">
         <p class="page-footer__text">Разработано</p>
         <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="page-footer__link-logo" src="img/logo-htmlacademy.svg" width="26" height="34" alt="Pink">
+          <svg class="page-footer__link-logo" width="26" height="34">
+            <use xlink:href="#logo-htmlacademy"></use>
+          </svg>
         </a>
       </address>
     </footer>
