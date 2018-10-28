@@ -23,25 +23,16 @@
   width: 76px;
   height: 22px;
   fill: $white;
+}
 
-  &:hover,
-  &:focus {
-    fill: $pink;
-  }
+.page-header__logo:not(.page-header__logo--current):hover .page-header__logo-image,
+.page-header__logo:not(.page-header__logo--current):focus .page-header__logo-image {
+  fill: $pink;
+}
 
-  &:active {
-    fill: $white;
-    opacity: 0.3;
-  }
-
-  &--current:hover,
-  &--current:focus {
-    fill: $white;
-  }
-
-  &--current:active {
-    opacity: 1;
-  }
+.page-header__logo:not(.page-header__logo--current):active .page-header__logo-image {
+  fill: $white;
+  opacity: 0.3;
 }
 
 .page-header__toggle {
@@ -56,16 +47,16 @@
   width: 24px;
   height: 24px;
   fill: $white;
+}
 
-  &:hover,
-  &:focus {
-    fill: $pink;
-  }
+.page-header__toggle:hover .page-header__toggle-image,
+.page-header__toggle:focus .page-header__toggle-image {
+  fill: $pink;
+}
 
-  &:active {
-    fill: $pink;
-    opacity: 0.3;
-  }
+.page-header__toggle:active .page-header__toggle-image {
+  fill: $white;
+  opacity: 0.3;
 }
 
 @media (min-width: $tablet-width) {

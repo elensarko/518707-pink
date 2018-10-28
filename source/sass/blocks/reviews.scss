@@ -128,14 +128,14 @@
     width: 22px;
     height: 42px;
     fill: #bec2c7;
+  }
 
-    &:hover,
-    &:focus {
-      fill: #7e868f;
-    }
+  .reviews__arrow:hover .reviews__arrow-image,
+  .reviews__arrow:focus .reviews__arrow-image {
+    fill: #7e868f;
+  }
 
-    &:active {
-      fill: #e9ebec;
-    }
+  .reviews__arrow:active .reviews__arrow-image {
+    fill: #e9ebec;
   }
 }
