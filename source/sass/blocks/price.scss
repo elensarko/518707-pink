@@ -7,12 +7,12 @@
 
 .price__list {
   @include list-reset;
-  transform: translateX(-100%);
+  transform: translateX(-276px);
   display: flex;
 }
 
 .price__item {
-  width: 278px;
+  width: 276px;
   flex-shrink: 0;
   margin: 0 1px 20px;
   padding: 0;
@@ -24,6 +24,7 @@
 
 .price__header {
   position: relative;
+  z-index: 10;
   padding: 16px 0 21px;
   background-color: $blue;
   color: $white;
@@ -33,14 +34,14 @@
     content: url("../img/bg-hit.svg");
     position: absolute;
     top: 0;
-    left: 0;
+    left: -2px;
   }
 
   &--is-hit::after {
     content: "ХИТ";
     position: absolute;
-    top: 11px;
-    left: 10px;
+    top: 12px;
+    left: 8px;
     transform: rotate(-45deg);
   }
 }
@@ -79,8 +80,10 @@
   }
 
   &--unavailable::after {
+    width: 32px;
+    height: 26px;
     background-image: url("../img/icon-no.svg");
-    background-size: 30px 30px;
+    background-size: 26px 26px;
   }
 }
 
@@ -90,8 +93,6 @@
   }
 
   .price__header {
-    position: relative;
-    z-index: 10;
     padding-top: 12px;
     padding-bottom: 1px;
 

@@ -22,21 +22,56 @@
 .page-header__logo-image {
   width: 76px;
   height: 22px;
+  fill: $white;
+
+  &:hover,
+  &:focus {
+    fill: $pink;
+  }
+
+  &:active {
+    fill: $white;
+    opacity: 0.3;
+  }
+
+  &--current:hover,
+  &--current:focus {
+    fill: $white;
+  }
+
+  &--current:active {
+    opacity: 1;
+  }
 }
 
 .page-header__toggle {
-  width: 24px;
-  height: 23px;
-  font-size: 0;
-  background: url("../img/icon-menu-cross.svg") transparent 50% 50% no-repeat;
+  width: 30px;
+  height: 30px;
   border: none;
   cursor: pointer;
+  background-color: transparent;
+}
+
+.page-header__toggle-image {
+  width: 24px;
+  height: 24px;
+  fill: $white;
+
+  &:hover,
+  &:focus {
+    fill: $pink;
+  }
+
+  &:active {
+    fill: $pink;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .page-header__wrapper {
     padding-top: 26px;
-    padding-bottom: 34px;
+    padding-bottom: 36px;
     align-items: flex-end;
   }
 
