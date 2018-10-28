@@ -16,7 +16,7 @@
 }
 
 .edit__wrapper {
-  padding: 5px $content-padding 9px;
+  padding: 5px 40px 9px;
   width: 320px;
   background-color: $gray;
 }
@@ -87,7 +87,7 @@
 .edit__bar {
   position: absolute;
   bottom: 34px;
-  left: 40px;
+  left: 20px;
   width: 240px;
   height: 2px;
   background-color: $blue;
@@ -118,8 +118,11 @@
 
 
 .edit__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: -10px;
-  padding: 37px $content-padding 33px;
+  padding: 37px 0 33px;
   text-align: center;
 }
 
@@ -172,8 +175,7 @@
 @media (min-width: $tablet-width) {
   .edit__wrapper {
     width: 660px;
-    padding-top: 43px;
-    padding-bottom: 33px;
+    padding: 43px $content-padding 33px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -262,8 +264,6 @@
   }
 
   .edit__buttons {
-    display: flex;
-    flex-direction: column;
     align-self: flex-start;
     padding: 67px 0 7px;
   }

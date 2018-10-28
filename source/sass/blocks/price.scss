@@ -171,8 +171,10 @@
   }
 
   .price__option {
+    min-height: 45px;
     padding: 8px 0 7px;
     font-size: 0;
+    box-sizing: border-box;
 
     &::after {
       right: 50%;
