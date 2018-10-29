@@ -16,7 +16,7 @@
     </div>
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a class="page-header__logo" href="index.html">
+        <a class="page-header__logo" href="index.html" aria-label="Пинк">
           <svg class="page-header__logo-image">
             <use xlink:href="#logo-pink-white-mobile"></use>
             <use xlink:href="#logo-pink-white-tablet"></use>
@@ -54,14 +54,14 @@
         <h2 class="visually-hidden">Новые публикации.</h2>
         <ul class="photo__list">
           <li class="photo__item photo__item--panorama">
-            <a class="photo__link photo__link--panorama" href="#">
+            <a class="photo__link photo__link--panorama" href="#" aria-label="Ссылка на полноразмерное фото">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
-                <img class="photo__image photo__image--panorama" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Панорама">
+                <img class="photo__image photo__image--panorama" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Панорама дня">
               </picture>
             </a>
             <div class="photo__comment-wrapper photo__comment-wrapper--panorama">
@@ -76,7 +76,7 @@
             </div>
           </li>
           <li class="photo__item">
-            <a class="photo__link" href="#">
+            <a class="photo__link" href="#" aria-label="Ссылка на полноразмерное фото">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
@@ -98,7 +98,7 @@
             </div>
           </li>
           <li class="photo__item">
-            <a class="photo__link" href="#">
+            <a class="photo__link" href="#" aria-label="Ссылка на полноразмерное фото">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
@@ -120,7 +120,7 @@
             </div>
           </li>
           <li class="photo__item">
-            <a class="photo__link" href="#">
+            <a class="photo__link" href="#" aria-label="Ссылка на полноразмерное фото">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
@@ -143,7 +143,7 @@
             </div>
           </li>
           <li class="photo__item">
-            <a class="photo__link" href="#">
+            <a class="photo__link" href="#" aria-label="Ссылка на полноразмерное фото">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
@@ -165,7 +165,7 @@
             </div>
           </li>
           <li class="photo__item">
-            <a class="photo__link" href="#">
+            <a class="photo__link" href="#" aria-label="Ссылка на полноразмерное фото">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
@@ -187,7 +187,7 @@
             </div>
           </li>
           <li class="photo__item">
-            <a class="photo__link" href="#">
+            <a class="photo__link" href="#" aria-label="Ссылка на полноразмерное фото">
               <picture>
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
@@ -229,14 +229,14 @@
           <form class="edit__form" action="https://echo.htmlacademy.ru" method="post">
             <ul class="edit__list">
               <li class="edit__item">
-                <label class="edit__type edit__type--crop" for="crop" aria-label="Обрезка" tabindex="0">
+                <label class="edit__type edit__type--crop" for="crop" aria-label="Обрезка фото" tabindex="0">
                   <svg class="edit__type-icon edit__type-icon--crop edit__type-icon--active">
                     <use xlink:href="#icon-editor-crop"></use>
                   </svg>
                 </label>
                 <input class="edit__control" name="crop" id="crop" type="range">
                 <div class="edit__bar edit__bar--crop">
-                  <div class="edit__toggle edit__toggle--crop" tabindex="0" aria-label="Настройки размер фотографии"></div>
+                  <div class="edit__toggle edit__toggle--crop" tabindex="0" aria-label="Настройки размера фотографии"></div>
                 </div>
               </li>
               <li class="edit__item">
@@ -272,7 +272,7 @@
     </main>
 
     <footer class="page-footer">
-      <a class="page-footer__logo" href="index.html">
+      <a class="page-footer__logo" href="index.html" aria-label="Главная страница Пинк">
         <svg class="page-footer__logo-image">
           <use xlink:href="#logo-pink-blue-mobile"></use>
           <use xlink:href="#logo-pink-blue-desktop"></use>
@@ -280,18 +280,18 @@
       </a>
       <ul class="page-footer__social page-footer__social--photo social">
         <li class="social__item">
-          <a class="social__link social__link--twitter" href="#">Twitter</a>
+          <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Twitter</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">Facebook</a>
+          <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Facebook</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="#">YouTube</a>
+          <a class="social__link social__link--youtube" href="#"><span class="visually-hidden">YouTube</span></a>
         </li>
       </ul>
       <address class="page-footer__author">
         <p class="page-footer__text">Разработано</p>
-        <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Ссылка на сайт HTML Academy">
           <svg class="page-footer__link-logo" width="26" height="34">
             <use xlink:href="#logo-htmlacademy"></use>
           </svg>
