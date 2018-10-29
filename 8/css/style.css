@@ -245,7 +245,7 @@ a {
 @media (min-width: 660px) {
   .page-header__wrapper {
     padding-top: 26px;
-    padding-bottom: 36px;
+    padding-bottom: 37px;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end; }
@@ -476,8 +476,7 @@ a {
 .download__link {
   margin: 0;
   padding: 0;
-  display: block;
-  font-size: 0; }
+  display: block; }
   .download__link--default {
     width: 100%;
     margin-bottom: 32px;
@@ -1487,8 +1486,9 @@ a {
             flex-direction: column;
     background-color: #ffffff; }
   .form__group {
+    position: relative;
     margin: 20px 20px 38px;
-    padding: 20px 60px 42px;
+    padding: 20px 0 42px;
     background-color: #ffffff;
     border: 2px solid #e5e5e5;
     -webkit-box-ordinal-group: 4;
@@ -1511,19 +1511,23 @@ a {
           -ms-flex-order: 1;
               order: 1; }
     .form__group--contacts {
-      padding-left: 58px;
-      padding-right: 58px;
       padding-bottom: 16px; }
     .form__group--text-area {
       -webkit-box-ordinal-group: 6;
           -ms-flex-order: 5;
               order: 5;
-      padding: 40px 38px 40px; }
+      padding: 0; }
   .form__list {
-    padding: 0; }
+    padding: 0;
+    margin: 0 60px; }
+    .form__list--contacts {
+      margin: 0 58px; }
+    .form__list--name {
+      margin: 0; }
   .form__title {
     padding: 0 25px;
-    width: auto; }
+    width: auto;
+    margin: 0 auto; }
     .form__title--add {
       display: block; }
   .form__group--name .form__text-label {
@@ -1559,7 +1563,8 @@ a {
     margin-top: 17px; }
   .form__text--area {
     width: 500px;
-    min-height: 194px; }
+    min-height: 194px;
+    margin: 35px 58px 41px; }
   .form__label {
     padding: 28px 57px 17px; }
     .form__label--check {
@@ -1605,7 +1610,7 @@ a {
       -webkit-box-sizing: border-box;
               box-sizing: border-box; }
     .form__group--contacts {
-      padding: 17px 58px 2px; }
+      padding: 17px 0 2px; }
     .form__group--checkbox {
       padding-bottom: 36px; }
     .form__group--text-area {
@@ -1627,6 +1632,8 @@ a {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between; }
+    .form__list--radio {
+      margin: 0; }
   .form__list--name .form__text {
     margin-bottom: 40px;
     margin-top: 13px;
@@ -1824,7 +1831,6 @@ a {
   -webkit-box-shadow: 0 0 0 3px #e9ebec;
           box-shadow: 0 0 0 3px #e9ebec;
   border-radius: 50%;
-  font-size: 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
   .social__link--twitter {
@@ -1877,10 +1883,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+      flex-wrap: wrap; }
 
 .photo__item {
   display: -webkit-box;
@@ -1964,35 +1967,33 @@ a {
 
 @media (min-width: 660px) {
   .photo__list {
-    padding-left: 20px;
-    padding-right: 20px; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .photo__item {
     width: 300px;
+    margin: 0 10px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     position: relative; }
     .photo__item--panorama {
-      width: 100%;
-      margin-bottom: 30px; }
+      width: 660px;
+      margin: 0 0 30px;
+      overflow: hidden; }
   .photo__image {
     width: 300px;
     height: 300px; }
     .photo__image--panorama {
+      position: relative;
+      left: -20px;
       width: 700px;
       height: 509px; }
   .photo__link--panorama::before {
+    z-index: 10;
     top: 57px;
-    right: 0; }
+    right: 20px; }
   .photo__comment-wrapper {
     position: relative;
     display: -webkit-box;
@@ -2003,7 +2004,11 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
+    margin: -7px 0 20px;
     padding: 24px 27px 23px; }
+    .photo__comment-wrapper--panorama {
+      width: 620px;
+      margin: -7px 20px 20px; }
   .photo__comment {
     min-height: 72px;
     margin-bottom: auto; }
@@ -2020,23 +2025,26 @@ a {
         left: 105px; } }
 
 @media (min-width: 1200px) {
-  .photo__list {
-    padding: 0 130px; }
   .photo__item {
     width: 300px;
     margin-bottom: 33px; }
     .photo__item--panorama {
-      width: 100%;
+      width: 1200px;
       margin-bottom: 30px; }
   .photo__link--panorama::before {
     top: 54px;
-    right: 0; }
+    right: 130px; }
   .photo__image {
     width: 300px;
     height: 400px; }
     .photo__image--panorama {
+      left: 0;
       width: 1200px;
       height: 506px; }
+  .photo__comment-wrapper--panorama {
+    width: 940px;
+    margin-left: 130px;
+    margin-right: 130px; }
   .photo__comment--panorama {
     min-height: auto; }
   .photo__comment-like--panorama {
@@ -2063,7 +2071,7 @@ a {
   background-color: #ffffff; }
 
 .edit__wrapper {
-  padding: 5px 40px 9px;
+  padding: 5px 20px 9px;
   width: 320px;
   background-color: #f2f2f2; }
 
@@ -2078,7 +2086,7 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
-  padding: 0 20px;
+  padding: 0;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2155,16 +2163,6 @@ a {
     background-color: #d22856; }
 
 .edit__buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-bottom: -10px;
   padding: 37px 0 33px;
   text-align: center; }
@@ -2276,6 +2274,13 @@ a {
   .edit__toggle--contrast {
     left: 96px; }
   .edit__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-item-align: start;
         align-self: flex-start;
     padding: 67px 0 7px; }
