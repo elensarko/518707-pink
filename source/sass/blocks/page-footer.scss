@@ -15,27 +15,17 @@
   width: 146px;
   height: 40px;
   fill: $blue;
-
-  &:hover,
-  &:focus {
-    fill: $pink;
-  }
-
-  &:active {
-    fill: $blue;
-    opacity: 0.3;
-  }
-
-  &--current:hover,
-  &--current:focus {
-    fill: $blue;
-  }
-
-  &--current:active {
-    opacity: 1;
-  }
 }
 
+.page-footer__logo:not(.page-footer__logo--current):hover .page-footer__logo-image,
+.page-footer__logo:not(.page-footer__logo--current):focus .page-footer__logo-image {
+  fill: $pink;
+}
+
+.page-footer__logo:not(.page-footer__logo--current):active .page-footer__logo-image {
+  fill: $blue;
+  opacity: 0.3;
+}
 
 .page-footer__social {
   @include list-reset;
@@ -63,15 +53,15 @@
 
 .page-footer__link-logo {
   fill: $pink;
+}
 
-  &:hover,
-  &:focus {
-    fill: $blue;
-  }
+.page-footer__link:hover .page-footer__link-logo,
+.page-footer__link:focus .page-footer__link-logo {
+  fill: $blue;
+}
 
-  &:active {
-    fill: #bec2c7;
-  }
+.page-footer__link:active .page-footer__link-logo {
+  fill: #bec2c7;
 }
 
 @media (min-width: $tablet-width) {

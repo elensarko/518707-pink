@@ -17,7 +17,7 @@
 
 .edit__wrapper {
   padding: 5px $content-padding 9px;
-  width: 100%;
+  width: 320px;
   background-color: $gray;
 }
 
@@ -32,7 +32,7 @@
 
 .edit__list {
   @include list-reset;
-  padding: 0 $content-padding;
+  padding: 0;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -87,11 +87,16 @@
 .edit__bar {
   position: absolute;
   bottom: 34px;
-  left: 40px;
+  left: 20px;
   width: 240px;
   height: 2px;
   background-color: $blue;
   cursor: pointer;
+
+  &--fill,
+  &--contrast {
+    display: none;
+  }
 }
 
 .edit__toggle {
@@ -114,7 +119,7 @@
 
 .edit__buttons {
   margin-bottom: -10px;
-  padding: 37px $content-padding 33px;
+  padding: 37px 0 33px;
   text-align: center;
 }
 
@@ -131,6 +136,7 @@
   background-color: $gray;
   cursor: pointer;
   transition: all 0.3s ease-in;
+  box-sizing: border-box;
 
   &:hover,
   &:focus {
@@ -165,8 +171,8 @@
 
 @media (min-width: $tablet-width) {
   .edit__wrapper {
-    padding-top: 43px;
-    padding-bottom: 33px;
+    width: 660px;
+    padding: 43px $content-padding 33px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -233,6 +239,11 @@
   .edit__bar {
     width: 202px;
     left: 53px;
+
+    &--fill,
+    &--contrast {
+      display: block;
+    }
   }
 
   .edit__toggle {
@@ -251,7 +262,8 @@
 
   .edit__buttons {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-self: flex-start;
     padding: 67px 0 7px;
   }
 
@@ -272,6 +284,7 @@
   }
 
   .edit__wrapper {
+    width: 940px;
     margin: 0 130px 27px;
     padding-right: 60px;
     padding-left: 80px;
@@ -325,7 +338,7 @@
 
   .edit__buttons {
     width: 100%;
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }

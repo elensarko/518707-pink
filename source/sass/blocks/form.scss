@@ -203,8 +203,9 @@
   }
 
   .form__group {
+    position: relative;
     margin: 20px 20px 38px;
-    padding: 20px 60px 42px;
+    padding: 20px 0 42px;
     background-color: $white;
     border: 2px solid #e5e5e5;
     order: 3;
@@ -226,24 +227,32 @@
     }
 
     &--contacts {
-      padding-left: 58px;
-      padding-right: 58px;
       padding-bottom: 16px;
     }
 
     &--text-area {
       order: 5;
-      padding: 40px 38px 40px;
+      padding: 0;
     }
   }
 
   .form__list {
     padding: 0;
+    margin: 0 60px;
+
+    &--contacts {
+      margin: 0 58px;
+    }
+
+    &--name {
+      margin: 0;
+    }
   }
 
   .form__title {
     padding: 0 25px;
     width: auto;
+    margin: 0 auto;
 
     &--add {
       display: block;
@@ -292,6 +301,7 @@
   .form__text--area {
     width: 500px;
     min-height: 194px;
+    margin: 35px 58px 41px;
   }
 
   .form__label {
@@ -339,7 +349,7 @@
     }
 
     &--contacts {
-      padding: 17px 58px 2px;
+      padding: 17px 0 2px;
     }
 
     &--checkbox {
@@ -359,6 +369,10 @@
     &--name {
       flex-direction: column;
       justify-content: space-between;
+    }
+
+    &--radio {
+      margin: 0;
     }
   }
 

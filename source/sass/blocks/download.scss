@@ -37,7 +37,6 @@
 .download__link {
   @include indent-reset;
   display: block;
-  font-size: 0;
 
   &--default {
     width: 100%;
